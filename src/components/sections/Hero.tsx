@@ -16,11 +16,11 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="relative isolate px-4 sm:px-6 pt-14 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
+    <div className="relative isolate px-4 sm:px-6 pt-14 lg:px-8 bg-[#FFCCBB]">
       <div className="mx-auto max-w-2xl py-20 sm:py-32 lg:py-40">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight font-scandia">
-            <span className="glow bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400 block sm:inline">
+            <span className="glow bg-clip-text text-transparent bg-gradient-to-r from-[#006C84] to-[#6EB5C0] block sm:inline">
               Maßgeschneiderte Lösungen für
             </span>{" "}
             <div className="mt-2 sm:mt-0 sm:inline-block">
@@ -34,7 +34,7 @@ export default function Hero() {
               </span>
             </div>
           </h1>
-          <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600 px-4 sm:px-0">
+          <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-[#006C84]/80 px-4 sm:px-0">
             Effektive Strategien zur Kundengewinnung, reichweitenstarke
             Social-Media-Kampagnen und hochwertige Content-Marketing Lösungen.
           </p>

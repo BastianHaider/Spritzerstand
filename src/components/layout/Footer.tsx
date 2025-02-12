@@ -26,13 +26,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-100">
+    <footer className="bg-[#FFCCBB] text-[#006C84]">
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold font-scandia">AgencyName</h3>
-            <p className="text-gray-400 text-sm">
+            <h3 className="text-xl font-bold font-scandia">WhitePeak</h3>
+            <p className="text-[#006C84]/80 text-sm">
               Ihre Digital Marketing Agentur für nachhaltiges Wachstum und
               messbare Erfolge.
             </p>
@@ -41,7 +41,7 @@ export default function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-400 hover:text-gray-300"
+                  className="text-[#006C84]/80 hover:text-[#006C84]"
                 >
                   <item.icon className="h-5 w-5" />
                 </a>
@@ -57,7 +57,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="text-gray-400 hover:text-gray-300 text-sm"
+                    className="text-[#006C84]/80 hover:text-[#006C84] text-sm"
                   >
                     {item.name}
                   </a>
@@ -74,7 +74,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="text-gray-400 hover:text-gray-300 text-sm"
+                    className="text-[#006C84]/80 hover:text-[#006C84] text-sm"
                   >
                     {item.name}
                   </a>
@@ -86,14 +86,14 @@ export default function Footer() {
           {/* Newsletter */}
           <div>
             <h3 className="text-sm font-semibold mb-4">Newsletter</h3>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-[#006C84]/80 text-sm mb-4">
               Abonnieren Sie unseren Newsletter für die neuesten Updates.
             </p>
             <div className="flex gap-2">
               <Input
                 type="email"
                 placeholder="Email"
-                className="bg-gray-800 border-gray-700"
+                className="bg-white/90 border-[#006C84]/20"
               />
               <Button variant="secondary">Subscribe</Button>
             </div>
@@ -101,16 +101,22 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-[#006C84]/20 mt-12 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} AgencyName. All rights reserved.
+            <p className="text-[#006C84]/80 text-sm">
+              © {new Date().getFullYear()} WhitePeak. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
+              <a
+                href="#"
+                className="text-[#006C84]/80 hover:text-[#006C84] text-sm"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
+              <a
+                href="#"
+                className="text-[#006C84]/80 hover:text-[#006C84] text-sm"
+              >
                 Terms of Service
               </a>
             </div>

@@ -12,14 +12,19 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 export default function Header() {
   const menuItems = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
+    { href: "/services", label: "Unsere Leistungen" },
+    { href: "/about", label: "Über uns" },
     { href: "/blog", label: "Blog" },
   ];
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-[#E2E8E4] bg-white backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container flex h-16 items-center justify-between">
-        <div className="font-bold text-xl">AgencyName</div>
+        <a
+          href="/"
+          className="font-bold text-xl text-[#006C84] hover:text-[#6EB5C0] transition-colors"
+        >
+          WhitePeak
+        </a>
         <div className="hidden md:block">
           <NavigationMenu>
             <NavigationMenuList>
@@ -37,10 +42,16 @@ export default function Header() {
           </NavigationMenu>
         </div>
         <div className="flex items-center gap-4">
-          <Button className="hidden md:inline-flex">Contact Us</Button>
+          <Button className="hidden md:inline-flex bg-[#6EB5C0] hover:bg-[#FFCCBB] text-white border-none">
+            Kontakt
+          </Button>
           <Sheet>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="outline" size="icon">
+              <Button
+                variant="outline"
+                size="icon"
+                className="border-[#E2E8E4] text-[#006C84] hover:text-[#6EB5C0] hover:border-[#6EB5C0]"
+              >
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
@@ -50,12 +61,14 @@ export default function Header() {
                   <a
                     key={item.href}
                     href={item.href}
-                    className="text-lg font-medium hover:text-primary"
+                    className="text-lg font-medium text-[#006C84] hover:text-[#6EB5C0] transition-colors"
                   >
                     {item.label}
                   </a>
                 ))}
-                <Button className="mt-4">Contact Us</Button>
+                <Button className="mt-4 bg-[#6EB5C0] hover:bg-[#FFCCBB] text-white border-none">
+                  Kontakt
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>
