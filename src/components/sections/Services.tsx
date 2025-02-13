@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart, Globe, Megaphone, PenTool } from "lucide-react";
+import { SlideIn } from "@/components/ui/slide-in";
 
 const services = [
   {
@@ -45,12 +46,14 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-20 sm:py-32 bg-gray-50">
+    <section id="services" className="py-20 sm:py-32 bg-gray-50">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-scandia mb-4">
-            Unsere Dienstleistungen
-          </h2>
+          <SlideIn>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-scandia mb-4">
+              Unsere Dienstleistungen
+            </h2>
+          </SlideIn>
           <p className="text-gray-600 text-lg">
             Wir bieten maßgeschneiderte Lösungen für Ihr digitales Marketing
           </p>

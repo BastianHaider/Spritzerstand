@@ -7,7 +7,7 @@ export default function Footer() {
     main: [
       { name: "Home", href: "/" },
       { name: "About", href: "/about" },
-      { name: "Services", href: "/services" },
+      { name: "Services", href: "/#services" },
       { name: "Blog", href: "/blog" },
       { name: "Contact", href: "/contact" },
     ],
@@ -26,7 +26,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#FFCCBB] text-[#006C84]">
+    <footer className="bg-[#E2E8E4] text-[#006C84]">
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}

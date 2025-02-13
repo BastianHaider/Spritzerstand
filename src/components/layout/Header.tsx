@@ -7,13 +7,14 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Menu } from "lucide-react";
+import { smoothScroll } from "@/lib/smoothScroll";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Header() {
   const menuItems = [
     { href: "/", label: "Home" },
-    { href: "/services", label: "Unsere Leistungen" },
-    { href: "/about", label: "Über uns" },
+    { href: "/#services", label: "Unsere Leistungen" },
+    { href: "/#about", label: "Über uns" },
     { href: "/blog", label: "Blog" },
   ];
   return (
@@ -33,6 +34,12 @@ export default function Header() {
                   <NavigationMenuLink
                     className={navigationMenuTriggerStyle()}
                     href={item.href}
+                    onClick={(e) => {
+                      if (item.href.startsWith("/#")) {
+                        e.preventDefault();
+                        smoothScroll(item.href.substring(2));
+                      }
+                    }}
                   >
                     {item.label}
                   </NavigationMenuLink>
@@ -42,7 +49,10 @@ export default function Header() {
           </NavigationMenu>
         </div>
         <div className="flex items-center gap-4">
-          <Button className="hidden md:inline-flex bg-[#6EB5C0] hover:bg-[#FFCCBB] text-white border-none">
+          <Button
+            className="hidden md:inline-flex bg-[#6EB5C0] hover:bg-[#FFCCBB] text-white border-none"
+            onClick={() => (window.location.href = "/consultation")}
+          >
             Kontakt
           </Button>
           <Sheet>
@@ -62,11 +72,20 @@ export default function Header() {
                     key={item.href}
                     href={item.href}
                     className="text-lg font-medium text-[#006C84] hover:text-[#6EB5C0] transition-colors"
+                    onClick={(e) => {
+                      if (item.href.startsWith("/#")) {
+                        e.preventDefault();
+                        smoothScroll(item.href.substring(2));
+                      }
+                    }}
                   >
                     {item.label}
                   </a>
                 ))}
-                <Button className="mt-4 bg-[#6EB5C0] hover:bg-[#FFCCBB] text-white border-none">
+                <Button
+                  className="mt-4 bg-[#6EB5C0] hover:bg-[#FFCCBB] text-white border-none"
+                  onClick={() => (window.location.href = "/consultation")}
+                >
                   Kontakt
                 </Button>
               </nav>
