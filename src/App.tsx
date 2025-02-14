@@ -2,6 +2,10 @@ import { Suspense } from "react";
 import { useRoutes, Routes, Route } from "react-router-dom";
 import Home from "./components/home";
 import ConsultationForm from "./components/pages/ConsultationForm";
+import ContentMarketing from "./components/pages/services/ContentMarketing";
+import SeoOptimierung from "./components/pages/services/SeoOptimierung";
+import PerformanceMarketing from "./components/pages/services/PerformanceMarketing";
+import SocialMediaMarketing from "./components/pages/services/SocialMediaMarketing";
 import routes from "tempo-routes";
 
 function App() {
@@ -11,6 +15,22 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/consultation" element={<ConsultationForm />} />
+          <Route
+            path="/services/content-marketing"
+            element={<ContentMarketing />}
+          />
+          <Route
+            path="/services/seo-optimierung"
+            element={<SeoOptimierung />}
+          />
+          <Route
+            path="/services/performance-marketing"
+            element={<PerformanceMarketing />}
+          />
+          <Route
+            path="/services/social-media-marketing"
+            element={<SocialMediaMarketing />}
+          />
         </Routes>
         {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
       </>

@@ -17,6 +17,7 @@ const services = [
     icon: PenTool,
     color: "text-blue-600",
     bgColor: "bg-blue-50",
+    href: "/services/content-marketing",
   },
   {
     title: "SEO Optimierung",
@@ -25,6 +26,7 @@ const services = [
     icon: Globe,
     color: "text-emerald-600",
     bgColor: "bg-emerald-50",
+    href: "/services/seo-optimierung",
   },
   {
     title: "Performance Marketing",
@@ -33,6 +35,7 @@ const services = [
     icon: BarChart,
     color: "text-purple-600",
     bgColor: "bg-purple-50",
+    href: "/services/performance-marketing",
   },
   {
     title: "Social Media Marketing",
@@ -41,6 +44,7 @@ const services = [
     icon: Megaphone,
     color: "text-rose-600",
     bgColor: "bg-rose-50",
+    href: "/services/social-media-marketing",
   },
 ];
 
@@ -78,6 +82,7 @@ export default function Services() {
                 <Button
                   variant="ghost"
                   className={`group-hover:${service.color} -ml-4`}
+                  onClick={() => (window.location.href = service.href)}
                 >
                   Mehr erfahren
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />

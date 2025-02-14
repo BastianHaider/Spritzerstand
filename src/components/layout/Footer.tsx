@@ -12,10 +12,16 @@ export default function Footer() {
       { name: "Contact", href: "/contact" },
     ],
     services: [
-      { name: "Content Marketing", href: "#" },
-      { name: "Social Media", href: "#" },
-      { name: "SEO", href: "#" },
-      { name: "Advertising", href: "#" },
+      { name: "Content Marketing", href: "/services/content-marketing" },
+      {
+        name: "Social Media Marketing",
+        href: "/services/social-media-marketing",
+      },
+      { name: "SEO Optimierung", href: "/services/seo-optimierung" },
+      {
+        name: "Performance Marketing",
+        href: "/services/performance-marketing",
+      },
     ],
     social: [
       { name: "Facebook", icon: Facebook, href: "#" },

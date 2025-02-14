@@ -5,6 +5,14 @@
 @tailwind utilities;
 
 @layer utilities {
+  .perspective-1200 {
+    perspective: 1200px;
+    transform: rotateX(5deg);
+  }
+  .perspective-1200 {
+    perspective: 1200px;
+    transform: rotateX(5deg);
+  }
   .slide-up {
     opacity: 0;
     animation: slideUp 2s ease-out;

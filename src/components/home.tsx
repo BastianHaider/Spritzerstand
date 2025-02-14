@@ -3,6 +3,7 @@ import Footer from "./layout/Footer";
 import Hero from "./sections/Hero";
 import Services from "./sections/Services";
 import AboutUs from "./sections/AboutUs";
+import CaseStudy from "./sections/CaseStudy";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <main className="flex-grow">
         <Hero />
         <Services />
+        <CaseStudy />
         <AboutUs />
       </main>
       <Footer />
