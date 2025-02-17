@@ -5,9 +5,17 @@
 @tailwind utilities;
 
 @layer utilities {
-  .perspective-1200 {
-    perspective: 1200px;
-    transform: rotateX(5deg);
+  .macbook-pro {
+    perspective: 1500px;
+    transform-style: preserve-3d;
+  }
+
+  .macbook-pro > div:nth-child(2) {
+    transform: rotateX(10deg);
+    transform-origin: bottom;
+    box-shadow:
+      0 25px 50px rgba(0, 0, 0, 0.2),
+      0 15px 25px rgba(0, 0, 0, 0.1);
   }
   .perspective-1200 {
     perspective: 1200px;
