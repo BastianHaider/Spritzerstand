@@ -11,17 +11,17 @@ export default function AboutUs() {
       bio: "Digital Marketing Experte mit langjähriger Erfahrung in der Entwicklung erfolgreicher Marketing-Strategien.",
       social: [
         { icon: Linkedin, href: "#", label: "LinkedIn" },
-        { icon: Mail, href: "mailto:bastian@whitepeak.com", label: "Email" },
+        { icon: Mail, href: "mailto:b.haider@whitepeak.at", label: "Email" },
       ],
     },
     {
       name: "Dario Bjelobrk",
       role: "Co-Founder & CTO",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=dario",
-      bio: "Technologie-Enthusiast mit Fokus auf innovative Lösungen im digitalen Marketing.",
+      image: "/images/team/dario.png",
+      bio: "Vertriebs- und Marketingexperte mit Fokus auf innovative Lösungen und nachhaltige Kundenbeziehungen.",
       social: [
         { icon: Linkedin, href: "#", label: "LinkedIn" },
-        { icon: Mail, href: "mailto:dario@whitepeak.com", label: "Email" },
+        { icon: Mail, href: "mailto:d.bjelobrk@whitepeak.at", label: "Email" },
       ],
     },
   ];

@@ -23,7 +23,8 @@
   }
   .slide-up {
     opacity: 0;
-    animation: slideUp 2s ease-out;
+    animation: slideUp 2s ease-out forwards;
+    white-space: nowrap;
   }
 
   @keyframes slideUp {

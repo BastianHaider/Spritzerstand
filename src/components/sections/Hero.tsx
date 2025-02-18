@@ -39,10 +39,10 @@ export default function Hero() {
               Maßgeschneiderte Lösungen für
             </span>{" "}
             <div className="mt-2 sm:mt-0 sm:inline-block">
-              <span className="inline-block sm:w-[250px]">
+              <span className="inline-block relative sm:w-[200px] h-[40px]">
                 <span
                   key={currentWord}
-                  className={`slide-up inline-block ${words[currentWord].color}`}
+                  className={`slide-up absolute left-0 ${words[currentWord].color}`}
                 >
                   {words[currentWord].text}
                 </span>
