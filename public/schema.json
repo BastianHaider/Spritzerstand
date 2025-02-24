@@ -1,0 +1,41 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "WhitePeak Digital Marketing Agentur",
+  "image": "https://whitepeak.at/logo.png",
+  "@id": "https://whitepeak.at",
+  "url": "https://whitepeak.at",
+  "telephone": "+43-123-456789",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rainerstraße 42",
+    "addressLocality": "Marchtrenk",
+    "postalCode": "4614",
+    "addressRegion": "Oberösterreich",
+    "addressCountry": "AT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.3064,
+    "longitude": 14.2858
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "17:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/whitepeak",
+    "https://www.instagram.com/whitepeak",
+    "https://www.linkedin.com/company/whitepeak"
+  ],
+  "priceRange": "€€",
+  "description": "Professionelle Marketing Agentur in Linz, Oberösterreich. Spezialisiert auf SEO, Content Marketing und Performance Marketing."
+}

@@ -2,6 +2,9 @@ import { Suspense } from "react";
 import { useRoutes, Routes, Route } from "react-router-dom";
 import Home from "./components/home";
 import ConsultationForm from "./components/pages/ConsultationForm";
+import Impressum from "./components/pages/Impressum";
+import Datenschutz from "./components/pages/Datenschutz";
+import AGB from "./components/pages/AGB";
 import ContentMarketing from "./components/pages/services/ContentMarketing";
 import SeoOptimierung from "./components/pages/services/SeoOptimierung";
 import PerformanceMarketing from "./components/pages/services/PerformanceMarketing";
@@ -15,6 +18,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/consultation" element={<ConsultationForm />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/agb" element={<AGB />} />
           <Route
             path="/services/content-marketing"
             element={<ContentMarketing />}

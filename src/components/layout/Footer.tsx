@@ -107,23 +107,29 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[#006C84]/20 mt-12 pt-8">
+        <div className="border-t border-[#006C84]/20 mt-8 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-[#006C84]/80 text-sm">
               © {new Date().getFullYear()} WhitePeak. All rights reserved.
             </p>
             <div className="flex gap-6">
               <a
-                href="#"
+                href="/datenschutz"
                 className="text-[#006C84]/80 hover:text-[#006C84] text-sm"
               >
-                Privacy Policy
+                Datenschutzerklärung
               </a>
               <a
-                href="#"
+                href="/agb"
                 className="text-[#006C84]/80 hover:text-[#006C84] text-sm"
               >
-                Terms of Service
+                AGB
+              </a>
+              <a
+                href="/impressum"
+                className="text-[#006C84]/80 hover:text-[#006C84] text-sm"
+              >
+                Impressum
               </a>
             </div>
           </div>

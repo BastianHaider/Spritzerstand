@@ -17,7 +17,7 @@ export default function AboutUs() {
     {
       name: "Dario Bjelobrk",
       role: "Co-Founder & CTO",
-      image: "/images/team/dario.png",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=dario",
       bio: "Vertriebs- und Marketingexperte mit Fokus auf innovative Lösungen und nachhaltige Kundenbeziehungen.",
       social: [
         { icon: Linkedin, href: "#", label: "LinkedIn" },

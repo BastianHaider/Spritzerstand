@@ -16,6 +16,7 @@ export default function Header() {
     { href: "/#services", label: "Unsere Leistungen" },
     { href: "/#case-study", label: "Erfolge" },
     { href: "/#about", label: "Über uns" },
+    { href: "/#faq", label: "FAQ" },
     { href: "/blog", label: "Blog" },
   ];
   return (

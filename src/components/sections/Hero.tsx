@@ -34,11 +34,15 @@ export default function Hero() {
       </div>
       <div className="mx-auto max-w-2xl py-20 sm:py-32 lg:py-40">
         <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight font-scandia">
+          <h1
+            className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight font-scandia"
+            itemProp="headline"
+          >
             <span className="text-[#006C84] block sm:inline">
-              Maßgeschneiderte Lösungen für
+              Ihre Marketing Agentur in Linz
             </span>{" "}
             <div className="mt-2 sm:mt-0 sm:inline-block">
+              <span className="text-[#006C84]">für</span>{" "}
               <span className="inline-block relative sm:w-[200px] h-[40px]">
                 <span
                   key={currentWord}
@@ -50,8 +54,9 @@ export default function Hero() {
             </div>
           </h1>
           <p className="mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-[#006C84]/80 px-4 sm:px-0">
-            Effektive Strategien zur Kundengewinnung, reichweitenstarke
-            Social-Media-Kampagnen und hochwertige Content-Marketing Lösungen.
+            Ihre führende Digital Marketing Agentur in Oberösterreich. Wir
+            bieten professionelles SEO, Content Marketing und Performance
+            Marketing in Linz und Umgebung.
           </p>
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 px-4 sm:px-0">
             <Button
