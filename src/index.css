@@ -48,25 +48,45 @@
 
   .glow {
     text-shadow:
-      0 0 10px rgba(66, 153, 225, 0.5),
-      0 0 20px rgba(66, 153, 225, 0.3),
-      0 0 30px rgba(66, 153, 225, 0.2);
+      0 0 10px rgba(117, 106, 242, 0.5),
+      0 0 20px rgba(148, 243, 246, 0.4),
+      0 0 30px rgba(117, 106, 242, 0.3);
     animation: glow 2s ease-in-out infinite alternate;
   }
 
   @keyframes glow {
     from {
       text-shadow:
-        0 0 10px rgba(66, 153, 225, 0.5),
-        0 0 20px rgba(66, 153, 225, 0.3),
-        0 0 30px rgba(66, 153, 225, 0.2);
+        0 0 10px rgba(117, 106, 242, 0.5),
+        0 0 20px rgba(148, 243, 246, 0.4),
+        0 0 30px rgba(117, 106, 242, 0.3);
     }
     to {
       text-shadow:
-        0 0 20px rgba(66, 153, 225, 0.6),
-        0 0 30px rgba(66, 153, 225, 0.4),
-        0 0 40px rgba(66, 153, 225, 0.3);
+        0 0 20px rgba(117, 106, 242, 0.7),
+        0 0 30px rgba(148, 243, 246, 0.6),
+        0 0 40px rgba(117, 106, 242, 0.5);
     }
+  }
+
+  .bg-size-200 {
+    background-size: 200% auto;
+  }
+
+  @keyframes gradient-x {
+    0% {
+      background-position: 0% center;
+    }
+    50% {
+      background-position: 100% center;
+    }
+    100% {
+      background-position: 0% center;
+    }
+  }
+
+  .animate-gradient-x {
+    animation: gradient-x 8s linear infinite;
   }
 }
 

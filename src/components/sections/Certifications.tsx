@@ -18,7 +18,7 @@ export default function Certifications() {
         <div className="flex justify-center items-center gap-8 flex-wrap">
           <div className="w-32 h-32 md:w-40 md:h-40 relative">
             <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=60"
+              src="/images/certifications/ads-search.png"
               alt="Google Ads Search Certification"
               className="w-full h-full object-contain"
             />
