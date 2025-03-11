@@ -9,6 +9,9 @@ import ContentMarketing from "./components/pages/services/ContentMarketing";
 import SeoOptimierung from "./components/pages/services/SeoOptimierung";
 import PerformanceMarketing from "./components/pages/services/PerformanceMarketing";
 import SocialMediaMarketing from "./components/pages/services/SocialMediaMarketing";
+import TechStartCaseStudy from "./components/pages/case-studies/TechStart";
+import FashionNowCaseStudy from "./components/pages/case-studies/FashionNow";
+import IndustrySolutionsCaseStudy from "./components/pages/case-studies/IndustrySolutions";
 import routes from "tempo-routes";
 
 function App() {
@@ -36,6 +39,18 @@ function App() {
           <Route
             path="/services/social-media-marketing"
             element={<SocialMediaMarketing />}
+          />
+          <Route
+            path="/case-studies/techstart"
+            element={<TechStartCaseStudy />}
+          />
+          <Route
+            path="/case-studies/fashionnow"
+            element={<FashionNowCaseStudy />}
+          />
+          <Route
+            path="/case-studies/industrysolutions"
+            element={<IndustrySolutionsCaseStudy />}
           />
         </Routes>
         {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}

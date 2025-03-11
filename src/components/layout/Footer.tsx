@@ -29,11 +29,11 @@ export default function Footer() {
 
   const navigation = {
     main: [
-      { name: "Home", href: "/" },
-      { name: "About", href: "/about" },
-      { name: "Services", href: "/#services" },
+      { name: "Über uns", href: "/#about" },
+      { name: "Leistungen", href: "/#services" },
+      { name: "Erfolge", href: "/#case-study" },
+      { name: "FAQ", href: "/#faq" },
       { name: "Blog", href: "/blog" },
-      { name: "Contact", href: "/contact" },
     ],
     services: [
       { name: "Content Marketing", href: "/services/content-marketing" },
@@ -57,7 +57,6 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden">
-      {/* Main Footer */}
       <div className="bg-white pt-16 pb-8">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">

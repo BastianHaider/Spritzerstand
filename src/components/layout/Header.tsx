@@ -46,74 +46,20 @@ export default function Header() {
   }, []);
 
   const menuItems = [
-    { href: "/", label: "Home" },
     { href: "/#services", label: "Unsere Leistungen" },
     { href: "/#case-study", label: "Erfolge" },
     { href: "/#about", label: "Über uns" },
     { href: "/#faq", label: "FAQ" },
-    { href: "/blog", label: "Blog" },
   ];
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-500 ${
-        scrolled
-          ? "py-2 shadow-lg bg-white"
-          : "py-4 bg-gradient-to-r from-white via-white to-white/90 backdrop-blur-lg"
+      className={`fixed top-0 z-50 w-full transition-all duration-500 ${
+        scrolled ? "py-2 shadow-lg bg-white" : "py-4 bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
-        {/* Stats Bar with Animated Background */}
-        <div className="hidden lg:flex h-12 items-center justify-center relative overflow-hidden rounded-full mb-3 bg-gradient-to-r from-brand-primary/5 via-brand-secondary/5 to-brand-primary/5">
-          <div className="absolute top-0 left-0 right-0 bottom-0 bg-[radial-gradient(circle,_transparent_20%,_white_70%)] opacity-60"></div>
-
-          <div className="flex items-center gap-12 py-2 px-6 z-10">
-            <div className="flex items-center gap-2 group">
-              <div className="relative">
-                <Trophy className="h-5 w-5 text-brand-primary group-hover:text-brand-secondary transition-colors duration-300" />
-                <span className="absolute -top-1 -right-1 h-2 w-2 bg-brand-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-brand-primary text-sm group-hover:text-brand-secondary transition-colors duration-300">
-                  500+
-                </span>
-                <span className="text-gray-600 text-xs">Zufriedene Kunden</span>
-              </div>
-            </div>
-
-            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent"></div>
-
-            <div className="flex items-center gap-2 group">
-              <div className="relative">
-                <BadgeCheck className="h-5 w-5 text-brand-primary group-hover:text-brand-secondary transition-colors duration-300" />
-                <span className="absolute -top-1 -right-1 h-2 w-2 bg-brand-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-brand-primary text-sm group-hover:text-brand-secondary transition-colors duration-300">
-                  95%
-                </span>
-                <span className="text-gray-600 text-xs">
-                  Kundenzufriedenheit
-                </span>
-              </div>
-            </div>
-
-            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent"></div>
-
-            <div className="flex items-center gap-2 group">
-              <div className="relative">
-                <Clock className="h-5 w-5 text-brand-primary group-hover:text-brand-secondary transition-colors duration-300" />
-                <span className="absolute -top-1 -right-1 h-2 w-2 bg-brand-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-brand-primary text-sm group-hover:text-brand-secondary transition-colors duration-300">
-                  10+ Jahre
-                </span>
-                <span className="text-gray-600 text-xs">Erfahrung</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Stats Bar removed as requested */}
 
         <div className="flex h-16 items-center justify-between relative">
           {/* Logo with animation effects */}
@@ -123,7 +69,9 @@ export default function Header() {
                 White
                 <span className="absolute top-0 left-0 w-full h-full bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-500"></span>
               </span>
-              <span className="font-bold text-xl lg:text-2xl text-brand-dark group-hover:text-brand-secondary transition-colors duration-300">
+              <span
+                className={`font-bold text-xl lg:text-2xl ${scrolled ? "text-brand-dark" : "text-white"} group-hover:text-brand-secondary transition-colors duration-300`}
+              >
                 Peak
               </span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-secondary group-hover:w-full transition-all duration-500 ease-in-out"></span>
@@ -144,8 +92,10 @@ export default function Header() {
                       <NavigationMenuLink
                         className={`relative px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                           isActive
-                            ? "text-brand-primary"
-                            : "text-gray-700 hover:text-brand-secondary"
+                            ? "text-brand-secondary font-semibold"
+                            : scrolled
+                              ? "text-gray-700 hover:text-brand-secondary"
+                              : "text-white hover:text-brand-primary"
                         }`}
                         href={item.href}
                         onClick={(e) => {
@@ -157,7 +107,7 @@ export default function Header() {
                       >
                         {item.label}
                         {isActive && (
-                          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-brand-primary rounded-full"></span>
+                          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-brand-secondary rounded-full"></span>
                         )}
                       </NavigationMenuLink>
                     </NavigationMenuItem>

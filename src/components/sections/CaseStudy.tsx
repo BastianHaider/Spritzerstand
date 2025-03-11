@@ -124,7 +124,7 @@ export default function CaseStudy() {
   return (
     <section
       id="case-study"
-      className="py-20 sm:py-32 relative overflow-hidden bg-gradient-to-b from-white to-gray-50"
+      className="py-16 sm:py-32 relative overflow-hidden bg-gradient-to-b from-white to-gray-50 w-full"
     >
       {/* Background elements */}
       <div className="absolute top-1/4 left-0 w-1/3 h-1/3 bg-brand-primary/10 rounded-full blur-3xl"></div>
@@ -155,21 +155,24 @@ export default function CaseStudy() {
           </motion.div>
         </div>
 
-        <div ref={containerRef} className="max-w-6xl mx-auto">
+        <div
+          ref={containerRef}
+          className="max-w-6xl mx-auto w-full px-4 sm:px-6"
+        >
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="space-y-16"
+            className="space-y-8 sm:space-y-16"
           >
             {caseStudies.map((study, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 bg-white rounded-2xl shadow-lg overflow-hidden`}
+                className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-4 sm:gap-8 bg-white rounded-2xl shadow-lg overflow-hidden w-full`}
               >
                 {/* Image Section */}
-                <div className="lg:w-2/5 relative overflow-hidden group">
+                <div className="w-full lg:w-2/5 h-56 sm:h-64 md:h-auto relative overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-tr from-brand-secondary/80 to-brand-primary/80 opacity-60 mix-blend-multiply z-10"></div>
                   <img
                     src={study.image}
@@ -190,36 +193,40 @@ export default function CaseStudy() {
                 </div>
 
                 {/* Content Section */}
-                <div className="lg:w-3/5 p-8 flex flex-col justify-between">
+                <div className="w-full lg:w-3/5 p-4 sm:p-8 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-2xl font-bold text-brand-dark mb-4">
+                    <h3 className="text-xl sm:text-2xl font-bold text-brand-dark mb-4">
                       {study.title}
                     </h3>
 
                     {/* Metrics */}
-                    <div className="grid grid-cols-3 gap-4 mb-6">
+                    <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6">
                       {study.metrics.map((metric, i) => (
                         <div
                           key={i}
-                          className="flex flex-col items-center p-3 bg-gray-50 rounded-lg"
+                          className="flex flex-col items-center p-2 sm:p-3 bg-gray-50 rounded-lg"
                         >
                           <metric.icon
                             className={`w-5 h-5 ${metric.color} mb-1`}
                           />
-                          <span className={`text-xl font-bold ${metric.color}`}>
+                          <span
+                            className={`text-base sm:text-xl font-bold ${metric.color}`}
+                          >
                             {metric.value}
                           </span>
-                          <span className="text-xs text-gray-500">
+                          <span className="text-[10px] sm:text-xs text-gray-500">
                             {metric.label}
                           </span>
                         </div>
                       ))}
                     </div>
 
-                    <p className="text-gray-600 mb-6">{study.description}</p>
+                    <p className="text-gray-600 mb-6 text-sm sm:text-base">
+                      {study.description}
+                    </p>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
                       {study.tags.map((tag, i) => (
                         <span
                           key={i}
@@ -233,8 +240,14 @@ export default function CaseStudy() {
 
                   <div className="flex justify-end">
                     <a
-                      href="#"
-                      className="inline-flex items-center text-sm font-medium text-brand-secondary hover:text-brand-primary transition-colors duration-300 group"
+                      href={
+                        index === 0
+                          ? "/case-studies/techstart"
+                          : index === 1
+                            ? "/case-studies/fashionnow"
+                            : "/case-studies/industrysolutions"
+                      }
+                      className="inline-flex items-center text-sm font-medium border border-brand-secondary text-brand-secondary hover:bg-brand-secondary hover:text-white px-4 py-2 rounded-md transition-all duration-300 group"
                     >
                       Vollständige Case Study
                       <ArrowUpRight className="ml-1 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />

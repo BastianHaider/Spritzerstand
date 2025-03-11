@@ -2,32 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://whitepeak.at/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2023-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://whitepeak.at/consultation</loc>
+    <lastmod>2023-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://whitepeak.at/services/content-marketing</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2023-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://whitepeak.at/services/seo-optimierung</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2023-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://whitepeak.at/services/performance-marketing</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2023-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://whitepeak.at/services/social-media-marketing</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2023-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://whitepeak.at/impressum</loc>
+    <lastmod>2023-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://whitepeak.at/datenschutz</loc>
+    <lastmod>2023-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://whitepeak.at/agb</loc>
+    <lastmod>2023-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

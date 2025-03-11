@@ -48,24 +48,24 @@
 
   .glow {
     text-shadow:
-      0 0 10px rgba(117, 106, 242, 0.5),
-      0 0 20px rgba(148, 243, 246, 0.4),
-      0 0 30px rgba(117, 106, 242, 0.3);
+      0 0 10px rgba(255, 255, 255, 0.7),
+      0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 30px rgba(255, 255, 255, 0.3);
     animation: glow 2s ease-in-out infinite alternate;
   }
 
   @keyframes glow {
     from {
       text-shadow:
-        0 0 10px rgba(117, 106, 242, 0.5),
-        0 0 20px rgba(148, 243, 246, 0.4),
-        0 0 30px rgba(117, 106, 242, 0.3);
+        0 0 10px rgba(255, 255, 255, 0.7),
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.3);
     }
     to {
       text-shadow:
-        0 0 20px rgba(117, 106, 242, 0.7),
-        0 0 30px rgba(148, 243, 246, 0.6),
-        0 0 40px rgba(117, 106, 242, 0.5);
+        0 0 20px rgba(255, 255, 255, 0.9),
+        0 0 30px rgba(255, 255, 255, 0.7),
+        0 0 40px rgba(255, 255, 255, 0.5);
     }
   }
 
@@ -87,6 +87,19 @@
 
   .animate-gradient-x {
     animation: gradient-x 8s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
   }
 }
 
